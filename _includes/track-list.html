@@ -1,11 +1,11 @@
 {% comment %}
-  Render an audio track list. `tracks` is a YAML array of objects with: title, src, key (optional), tempo (optional).
+  Render an audio track list. `tracks` is a YAML array of objects with: title, src.
+  The duration column is populated client-side from the audio's loadedmetadata event.
 {% endcomment %}
 <div class="track-list" data-track-list>
   <div class="track-list__head">
     <div>#</div>
     <div>TITLE</div>
-    <div>STYLE</div>
     <div>LEN</div>
   </div>
   {% for t in include.tracks %}
@@ -20,9 +20,8 @@
       <div class="track__title">{{ t.title }}</div>
       <div class="track__progress"><div class="track__progress-bar" data-track-progress></div></div>
     </div>
-    <div class="track__meta">{{ t.style | default: '—' }}</div>
     <div class="track__num" data-track-len>{{ t.len | default: '' }}</div>
-    <audio preload="none" data-track-audio src="{{ t.src | relative_url }}"></audio>
+    <audio preload="metadata" data-track-audio src="{{ t.src | relative_url }}"></audio>
   </div>
   {% endfor %}
 </div>

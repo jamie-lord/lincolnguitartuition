@@ -1,34 +1,24 @@
 # Backing tracks library — current students supporting materials.
-- title: "Blues backing in Am"
+# Labels match Dan's original WordPress page (deliberately minimal).
+- title: "1.mp3"
   src: /wp-content/uploads/2014/08/1.mp3
-  style: "Blues"
-- title: "Smoke on the Water"
+- title: "2.mp3"
   src: /wp-content/uploads/2014/08/2.mp3
-  style: "Rock"
-- title: "Comfortably Numb"
+- title: "3.mp3"
   src: /wp-content/uploads/2014/09/3.mp3
-  style: "Rock"
-- title: "Black Night"
+- title: "4.mp3"
   src: /wp-content/uploads/2014/08/4.mp3
-  style: "Rock"
-- title: "A Minor Affair"
+- title: "5.mp3"
   src: /wp-content/uploads/2014/08/5.mp3
-  style: "Jazz"
-- title: "Austin Skyline Shuffle"
+- title: "6.mp3"
   src: /wp-content/uploads/2014/08/6.mp3
-  style: "Blues"
-- title: "Chicago Blues"
+- title: "7.mp3"
   src: /wp-content/uploads/2014/08/7.mp3
-  style: "Blues"
-- title: "Classic Stop-Time Blues"
+- title: "8.mp3"
   src: /wp-content/uploads/2014/08/8.mp3
-  style: "Blues"
-- title: "Funky Woman"
+- title: "9.mp3"
   src: /wp-content/uploads/2014/08/9.mp3
-  style: "Funk"
-- title: "Monkey Paw"
+- title: "10.mp3"
   src: /wp-content/uploads/2014/08/10.mp3
-  style: "Rock"
 - title: "Kanon backing"
   src: /wp-content/uploads/2014/08/Kanon-minus-gtr-1-Output-Stereo-Out.mp3
-  style: "Classical"
