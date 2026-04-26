@@ -1,0 +1,66 @@
+---
+layout: default
+permalink: /faqs/
+title: Guitar lesson FAQs
+description: Beginner advice — what guitar to buy, how to start, how long to practice. Frequently asked questions about guitar lessons in Lincoln.
+redirect_from:
+  - /faq/
+---
+
+<section class="page-hero">
+  <div class="page-hero__glow" aria-hidden="true"></div>
+  <span class="eyebrow">Frequently asked</span>
+  <h1 class="display page-hero__title">A few <em>practical</em> questions.</h1>
+  <p class="page-hero__lead">Quick answers to what people ask before their first lesson — what guitar to buy, how to start, how often to practice.</p>
+</section>
+
+<section class="section section--bordered">
+  <div class="container" style="max-width: 880px;">
+    {% for group in site.data.faqs %}
+    <div style="margin-bottom: 56px;">
+      <p class="eyebrow" style="margin-bottom: 18px;">{{ group.group }}</p>
+      <div class="faq">
+        {% for item in group.items %}
+        <details class="faq__item" {% if forloop.first and forloop.parentloop.first %}open{% endif %}>
+          <summary class="faq__q">{{ item.q }}</summary>
+          <div class="faq__a">
+            {{ item.a | markdownify }}
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div style="margin-top: 64px; padding: 32px; background: var(--bg-1); border: 1px solid var(--line-1); border-radius: 8px;">
+      <p class="eyebrow" style="margin-bottom: 12px;">Still wondering?</p>
+      <p style="margin: 0 0 18px; color: var(--fg-1); font-size: 17px;">If your question isn't here, drop me a line — happy to chat through it before you book.</p>
+      <a class="btn btn--primary" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  details.faq__item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    transition: color 180ms var(--ease-out);
+  }
+  details.faq__item summary::-webkit-details-marker { display: none; }
+  details.faq__item summary::after {
+    content: "+";
+    font-family: var(--font-mono);
+    font-size: 24px;
+    color: var(--amber);
+    transition: transform 220ms var(--ease-out);
+    line-height: 1;
+  }
+  details.faq__item[open] summary::after { content: "−"; }
+  details.faq__item summary:hover { color: var(--amber-bright); }
+  details.faq__item[open] summary { color: var(--amber); }
+  details.faq__item .faq__a { padding-top: 14px; }
+</style>

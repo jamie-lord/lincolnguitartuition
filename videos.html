@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /videos/
+title: Student videos
+description: Performance videos from Lincoln Guitar Tuition students — Ela-Lenka, Fergus on BBC1, Krysia and more.
+---
+
+<section class="page-hero">
+  <div class="page-hero__glow" aria-hidden="true"></div>
+  <span class="eyebrow">Videos</span>
+  <h1 class="display page-hero__title">Students <em>playing.</em></h1>
+  <p class="page-hero__lead">A handful of student performances and clips, including a few from telly. If the videos don't play on your device, try <a href="https://danmccaughern.wixsite.com/lincoln-guitar-tuiti">this mirror</a>.</p>
+</section>
+
+<section class="section section--bordered">
+  <div class="container">
+    <div class="video-grid">
+      {% for v in site.data.videos %}
+      <article class="video-card">
+        <video controls preload="metadata" playsinline src="{{ v.src | relative_url }}"></video>
+        <div class="video-card__caption">{{ v.title }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -6,14 +6,14 @@ description: >-
   Classical, Country, Folk and Funk.
 url: "https://lincolnguitartuition.uk"
 baseurl: ""
+
 author:
   name: Dan McCaughern
-  email: dan@lincolnguitartuition.uk
+  email: danguitarman@icloud.com
 
+# Pages live at top-level slugs. Each page sets its own permalink to match
+# the original WordPress URL.
 permalink: /:slug/
-
-# Use a trailing slash on every page to match the existing WordPress URLs.
-# A custom permalink is set per-page where needed.
 
 defaults:
   - scope:
@@ -28,12 +28,21 @@ plugins:
   - jekyll-redirect-from
   - jekyll-feed
 
+# Keep the mirrored WordPress uploads — Jekyll would otherwise treat the
+# directory as not-a-source and not copy it. (Belt and braces with `include`.)
+keep_files:
+  - wp-content
+
+include:
+  - wp-content
+  - _redirects
+
 # Social / SEO
 social:
   name: Dan McCaughern
   links: []
 
-logo: /assets/img/logo.svg
+logo: /assets/img/favicon.svg
 
 # Build
 markdown: kramdown
@@ -50,6 +59,6 @@ exclude:
   - lincolnguitartuition.WordPress.2026-04-26.xml
   - "ui_kits 2"
   - .DS_Store
-
-include:
-  - _redirects
+  - scripts
+  - dns
+  - .github

@@ -1,0 +1,43 @@
+---
+layout: default
+permalink: /testimonials/
+title: Testimonials
+description: What students, parents and fellow musicians say about lessons with Dan McCaughern.
+---
+
+<section class="page-hero">
+  <div class="page-hero__glow" aria-hidden="true"></div>
+  <span class="eyebrow">04 / Testimonials</span>
+  <h1 class="display page-hero__title">In their own <em>words.</em></h1>
+  <p class="page-hero__lead">From students, parents, fellow teachers and the music sector — a few notes from people I've taught and worked with.</p>
+</section>
+
+<section class="section section--bordered">
+  <div class="container">
+    <div class="testimonial-grid">
+      {% for q in site.data.testimonials %}
+      <article class="testimonial {% if q.featured %}testimonial--featured{% endif %}">
+        <span class="testimonial__quote" aria-hidden="true">"</span>
+        <div class="testimonial__body">{{ q.body | markdownify }}</div>
+        <div class="testimonial__attr">
+          <div>
+            <div class="testimonial__name">{% if q.url %}<a href="{{ q.url }}" target="_blank" rel="noopener">{{ q.name }}</a>{% else %}{{ q.name }}{% endif %}</div>
+            <div class="testimonial__role">{{ q.role }}</div>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <figure style="margin: 64px 0 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line-1);">
+      <img src="{{ '/wp-content/uploads/2022/09/Thank-you-cards.jpg' | relative_url }}" alt="Thank-you cards from students"/>
+      <figcaption style="padding: 14px 18px; font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); letter-spacing: 0.18em; text-transform: uppercase; background: var(--bg-1); border-top: 1px solid var(--line-1);">A few of the thank-you cards from students over the years.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<style>
+  .testimonial__body p:last-child { margin-bottom: 0; }
+  .testimonial__name a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--amber); }
+  .testimonial__name a:hover { color: var(--amber); }
+</style>

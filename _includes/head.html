@@ -9,3 +9,35 @@
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
 {% feed_meta %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lincoln Guitar Tuition",
+  "image": "{{ '/wp-content/uploads/2014/08/Dan-Black-Background.jpg' | absolute_url }}",
+  "url": "{{ site.url }}{{ site.baseurl }}/",
+  "telephone": "{{ site.data.contact.phone }}",
+  "email": "{{ site.data.contact.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.data.contact.address.line1 }}, {{ site.data.contact.address.line2 }}",
+    "addressLocality": "{{ site.data.contact.address.city }}",
+    "addressRegion": "Lincolnshire",
+    "postalCode": "{{ site.data.contact.address.postcode }}",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.2325357,
+    "longitude": -0.5435606
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Dan McCaughern",
+    "jobTitle": "Guitar tutor"
+  },
+  "areaServed": "Lincoln, Lincolnshire",
+  "priceRange": "££"
+}
+</script>

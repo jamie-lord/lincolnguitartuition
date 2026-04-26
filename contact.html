@@ -1,0 +1,39 @@
+---
+layout: default
+permalink: /contact/
+title: Contact
+description: Get in touch about guitar lessons in Lincoln. Studio at 30 Victoria Street, Lincoln LN1 1HY. Skype lessons available.
+redirect_from:
+  - /book/
+  - /booking/
+---
+
+<section class="page-hero">
+  <div class="page-hero__glow" aria-hidden="true"></div>
+  <span class="eyebrow">05 / Get in touch</span>
+  <h1 class="display page-hero__title">Send a <em>message.</em></h1>
+  <p class="page-hero__lead">Studio in central Lincoln. Skype lessons worldwide. Drop a line and I'll come back to you within a couple of days.</p>
+</section>
+
+<section class="section section--bordered">
+  <div class="container">
+    <div class="contact">
+      <div>
+        <p style="margin: 0 0 24px;">
+          <a class="btn btn--primary" href="mailto:{{ site.data.contact.email }}?subject=Guitar%20lesson%20enquiry">Email Dan directly</a>
+        </p>
+        <div class="contact__rows">
+          {% include contact-rows.html %}
+        </div>
+      </div>
+      <div>
+        <div class="contact__map">
+          <iframe src="{{ site.data.contact.map_embed }}" width="100%" height="420" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Map to the studio at 30 Victoria Street, Lincoln"></iframe>
+        </div>
+        <p style="margin-top: 18px; color: var(--fg-2); font-size: 14px;">
+          The studio is on Victoria Street, just off West Parade — a five-minute walk uphill from Lincoln Central station, with on-street parking nearby.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
