@@ -1,0 +1,55 @@
+title: Lincoln Guitar Tuition
+tagline: Tuition that opens up possibilities
+description: >-
+  Guitar tuition in central Lincoln with Dan McCaughern. Studio lessons,
+  Skype lessons and session work. All styles, all levels — Rock, Jazz,
+  Classical, Country, Folk and Funk.
+url: "https://lincolnguitartuition.uk"
+baseurl: ""
+author:
+  name: Dan McCaughern
+  email: dan@lincolnguitartuition.uk
+
+permalink: /:slug/
+
+# Use a trailing slash on every page to match the existing WordPress URLs.
+# A custom permalink is set per-page where needed.
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-feed
+
+# Social / SEO
+social:
+  name: Dan McCaughern
+  links: []
+
+logo: /assets/img/logo.svg
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - lincolnguitartuition.WordPress.2026-04-26.xml
+  - "ui_kits 2"
+  - .DS_Store
+
+include:
+  - _redirects

@@ -1,0 +1,28 @@
+{% comment %}
+  Render an audio track list. `tracks` is a YAML array of objects with: title, src, key (optional), tempo (optional).
+{% endcomment %}
+<div class="track-list" data-track-list>
+  <div class="track-list__head">
+    <div>#</div>
+    <div>TITLE</div>
+    <div>STYLE</div>
+    <div>LEN</div>
+  </div>
+  {% for t in include.tracks %}
+  <div class="track" data-track>
+    <div>
+      <button class="track__btn" type="button" aria-label="Play {{ t.title }}" data-track-btn>
+        <svg class="track__icon-play" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21"/></svg>
+        <svg class="track__icon-pause" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+      </button>
+    </div>
+    <div>
+      <div class="track__title">{{ t.title }}</div>
+      <div class="track__progress"><div class="track__progress-bar" data-track-progress></div></div>
+    </div>
+    <div class="track__meta">{{ t.style | default: '—' }}</div>
+    <div class="track__num" data-track-len>{{ t.len | default: '' }}</div>
+    <audio preload="none" data-track-audio src="{{ t.src | relative_url }}"></audio>
+  </div>
+  {% endfor %}
+</div>

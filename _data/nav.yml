@@ -1,0 +1,17 @@
+# Navigation matches the existing WordPress menu order.
+- title: About
+  url: /about/
+- title: Backing tracks
+  url: /backing-tracks/
+- title: Contact
+  url: /contact/
+- title: FAQs
+  url: /faqs/
+- title: TRAP
+  url: /trap/
+- title: Testimonials
+  url: /testimonials/
+- title: Videos
+  url: /videos/
+- title: Session backing
+  url: /session-backing/

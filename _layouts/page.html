@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="page-hero__glow" aria-hidden="true"></div>
+  <span class="eyebrow">{{ page.eyebrow | default: page.title }}</span>
+  <h1 class="display page-hero__title">{{ page.heading | default: page.title }}{% if page.heading_em %} <em>{{ page.heading_em }}</em>{% endif %}</h1>
+  {% if page.lead %}<p class="page-hero__lead">{{ page.lead }}</p>{% endif %}
+</section>
+
+<section class="section section--bordered">
+  <div class="container prose">
+    {{ content }}
+  </div>
+</section>

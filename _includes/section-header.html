@@ -1,0 +1,10 @@
+<div class="section-header">
+  <div class="section-header__meta">
+    <span class="section-header__num">{{ include.number }} / {{ include.label | upcase }}</span>
+    <div class="section-header__rule"></div>
+  </div>
+  <div>
+    <h2 class="display section-header__title">{{ include.title }}</h2>
+    {% if include.sub %}<p class="section-header__sub">{{ include.sub }}</p>{% endif %}
+  </div>
+</div>

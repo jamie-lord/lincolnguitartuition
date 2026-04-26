@@ -1,0 +1,23 @@
+<header class="site-nav" id="site-nav">
+  <a href="{{ '/' | relative_url }}" class="brand" aria-label="Lincoln Guitar Tuition home">
+    <span class="brand__row">
+      <span class="brand__name">Lincoln Guitar <em>Tuition</em></span>
+    </span>
+    <span class="brand__sub">DAN McCAUGHERN · LINCOLN</span>
+  </a>
+
+  <button class="site-nav__toggle" type="button" aria-controls="site-nav-list" aria-expanded="false" data-nav-toggle>MENU</button>
+
+  <ul class="site-nav__list" id="site-nav-list">
+    {% for item in site.data.nav %}
+    {% assign is_active = false %}
+    {% if page.url == item.url %}{% assign is_active = true %}{% endif %}
+    <li>
+      <a class="site-nav__link {% if is_active %}is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+    <li>
+      <a class="site-nav__cta" href="{{ '/contact/' | relative_url }}">Book a lesson</a>
+    </li>
+  </ul>
+</header>
