@@ -10,7 +10,7 @@ A modern, dark-and-moody redesign of `lincolnguitartuition.uk`. The original IA 
 - `LessonCard.jsx` — lesson tier card (in-person / online / sessions)
 - `BackingTrackPlayer.jsx` — track row with mono timestamp + amber play button
 - `TestimonialBlock.jsx` — pull-quote + attribution
-- `ContactBlock.jsx` — phone / email / studio address
+- `ContactBlock.jsx` — email / studio address
 - `Footer.jsx` — wordmark + nav + contact
 - `BioSection.jsx` — about Dan layout (image left, prose right)
 
