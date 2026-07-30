@@ -1,6 +1,15 @@
 {% assign c = site.data.contact %}
 <div class="contact-row">
   <div class="contact-row__icon" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><circle cx="12" cy="18" r="1"/></svg>
+  </div>
+  <div>
+    <div class="contact-row__label">Mobile</div>
+    <div class="contact-row__value"><a href="{{ c.mobile_href }}">{{ c.mobile }}</a></div>
+  </div>
+</div>
+<div class="contact-row">
+  <div class="contact-row__icon" aria-hidden="true">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
   </div>
   <div>

@@ -9,6 +9,8 @@ function ContactBlock() {
             Send a <em style={{ fontStyle: 'italic', color: 'var(--amber)' }}>message.</em>
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+            <ContactRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="5" y="2" width="14" height="20" rx="3"/><circle cx="12" cy="18" r="1"/></svg>}
+              label="Mobile" value="07708 336550"/>
             <ContactRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>}
               label="Email" value="dan@lincolnguitartuition.uk"/>
             <ContactRow icon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>}
